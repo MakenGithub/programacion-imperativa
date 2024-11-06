@@ -1,0 +1,45 @@
+Punteros en C++
+Declaración de punteros:
+
+Para declarar un puntero, se usa el operador *. Esto indica que la variable será un puntero que puede almacenar la dirección de memoria de otro tipo de variable.
+Ejemplo:
+cpp
+Copiar código
+int* p; // p es un puntero a un entero
+Asignación de punteros:
+
+Cuando asignas un puntero, le das la dirección de otra variable usando el operador &.
+Ejemplo:
+cpp
+Copiar código
+int a = 5; // Declaramos una variable entera
+int* p = &a; // p ahora apunta a la dirección de a
+Desreferenciar punteros:
+
+Para acceder al valor que el puntero apunta, se usa nuevamente el operador *. Esto se llama desreferenciar.
+Ejemplo:
+cpp
+Copiar código
+int valor = *p; // valor ahora es 5, que es el valor de a
+Uso combinado:
+
+Puedes modificar el valor de la variable a la que apunta el puntero desreferenciando el puntero.
+Ejemplo:
+cpp
+Copiar código
+*p = 10; // Cambia el valor de a a 10
+Resumen:
+*: Se usa para declarar un puntero y también para desreferenciarlo.
+&: Se usa para obtener la dirección de una variable.
+Ejemplo completo:
+cpp
+Copiar código
+int main() {
+    int a = 5;           // Variable entera
+    int* p = &a;        // p es un puntero que apunta a a
+
+    cout << *p;         // Imprime el valor de a (5)
+    
+    *p = 10;            // Cambia el valor de a a 10
+    cout << a;         // Imprime 10
+}
